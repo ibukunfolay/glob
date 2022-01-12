@@ -10,7 +10,7 @@ export class Vidlink extends Component {
 
   render() {
     const opts = {
-      height: "400",
+      height: "250",
       width: "100%",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters

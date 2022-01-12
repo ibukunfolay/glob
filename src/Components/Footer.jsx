@@ -39,7 +39,7 @@ const Footer = () => {
           <h2 className="my-4 font-medium text-center text-3xl">
             Subscribe to our news letter
           </h2>
-          <div className="border-solid border-2 rounded-full text-white px-4 font-medium text-base lg:text-xl py-2 ">
+          <div className="border-solid border-2 flex rounded-full text-white px-4 font-medium text-base lg:text-xl py-2 ">
             <input
               type="text"
               placeholder="Enter Email Address"
