@@ -5,7 +5,7 @@ import wave from "../Assets/wave.png";
 
 const Header = () => {
   return (
-    <div className="min-h-screen flex relative -mt-24 w-full flex-col py-4 px-6 items-center justify-center">
+    <div className="min-h-screen flex relative w-full flex-col py-4 px-6 items-center justify-center">
       <div className="flex flex-col-reverse lg:flex-row items-center py-4 pb-6 w-full text-white">
         <div className="text-center lg:text-left lg:w-1/2 w-full">
           <h2 className="text-white text-4xl font-bold">

@@ -1,10 +1,10 @@
 export default {
   nav: {
-    logo: "YP",
+    logo: "GrandWealth",
     links: [
       { text: "Invest", to: "Invest" },
       { text: "Loan", to: "Loan" },
-      { text: "AboutUS", to: "AboutUS" },
+      { text: "About us", to: "AboutUS" },
       { text: "Contact", to: "Contact" },
     ],
     auth: [
