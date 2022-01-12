@@ -1,14 +1,10 @@
 import Vidlink from "./Vidlink";
 
-const youtube = () => {
-  const opts = {
-    height: 390,
-    width: 300,
-  };
+const Youtube = () => {
   return (
-    <div className=" bg-gradient-to-b from-black via-Gray-900 to-BlueGray-900 min-h-screen py-[4em] px-[6em] text-white justify-center items-center mx flex font-bold">
-      <div className="video flex flex-col lg:flex-row">
-        <div className="youtube lg:mr-10 mb-[2em]">
+    <div className=" bg-gradient-to-b from-black via-Gray-900 to-BlueGray-900 min-h-screen py-[4em] px-[2em] text-white font-bold">
+      <div className="video flex flex-col lg:flex-row w-full">
+        <div className="youtube lg:mr-10 mb-[2em] lg:w-1/2 w-full">
           <Vidlink videoId="UfgbZ5wJszs" />
         </div>
         <div className="text-left">
@@ -35,4 +31,4 @@ const youtube = () => {
   );
 };
 
-export default youtube;
+export default Youtube;

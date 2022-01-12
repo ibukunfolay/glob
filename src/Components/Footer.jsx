@@ -43,7 +43,7 @@ const Footer = () => {
             <input
               type="text"
               placeholder="Enter Email Address"
-              className="mx-2 bg-transparent"
+              className="lg:mx-2  bg-transparent"
             />
             <button className="bg-gradient-to-r from-Cyan-500 to-Blue-500 px-4 py-1 rounded-full">
               Subscribe
