@@ -39,13 +39,13 @@ const Footer = () => {
           <h2 className="my-4 font-medium text-center text-3xl">
             Subscribe to our news letter
           </h2>
-          <div className="border-solid border-2 rounded-full text-white px-4 font-medium text-xl py-2 ">
+          <div className="border-solid border-2 rounded-full text-white px-4 font-medium text-base lg:text-xl py-2 ">
             <input
               type="text"
               placeholder="Enter Email Address"
               className="lg:mx-2  bg-transparent"
             />
-            <button className="bg-gradient-to-r from-Cyan-500 to-Blue-500 px-4 py-1 rounded-full">
+            <button className=" bg-gradient-to-r from-Cyan-500 to-Blue-500 px-4 py-1 rounded-full">
               Subscribe
             </button>
           </div>
