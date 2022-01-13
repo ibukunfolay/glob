@@ -9,7 +9,7 @@ const Header = () => {
       <div className="flex flex-col-reverse lg:flex-row items-center py-4 pb-6 mx-auto w-full text-white">
         <div className="text-center lg:text-left lg:w-1/2 w-3/4 mb-[2em]">
           <h2 className="text-white text-4xl font-bold">
-            Welcome to Grandwealth
+            Welcome to Capital Equity Funds
           </h2>
           <p className="text-white font-normal">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, sit.
@@ -17,7 +17,7 @@ const Header = () => {
             eius perferendis dolorum quaerat veniam?
           </p>
         </div>
-        <div className=" lg:w-1/2 w-full">
+        <div className=" lg:w-1/2 w-full -mb-[2em]">
           <img className="lg:w-3/4 w-full" src={pic} alt="mine bitcoin" />
         </div>
       </div>

@@ -1,6 +1,6 @@
 export default {
   nav: {
-    logo: "GrandWealth",
+    logo: "CEF",
     links: [
       { text: "Invest", to: "Invest" },
       { text: "Loan", to: "Loan" },
@@ -8,8 +8,8 @@ export default {
       { text: "Contact", to: "Contact" },
     ],
     auth: [
-      { text: "Login", to: "login" },
-      { text: "Sign up", to: "signup" },
+      { text: "Login", to: "/login" },
+      { text: "Sign up", to: "/signup" },
     ],
   },
 };

@@ -33,8 +33,8 @@ const Strips = () => {
   };
 
   const options = {
-    height: 200,
-    width: 150,
+    height: "100%",
+    width: "100%",
   };
 
   return (

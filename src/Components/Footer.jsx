@@ -3,7 +3,7 @@ import { BsFacebook, BsInstagram, BsTelegram, BsTwitter } from "react-icons/bs";
 const Footer = () => {
   return (
     <div className="flex flex-col">
-      <div className="top flex min-h-screen flex-col bg-gradient-to-b from-black via-Gray-900 to-[#0B0D26] lg:flex-row lg:h-[70vh] lg:justify-between text-white py-10 px-4 justify-center items-center">
+      <div className="top flex lg:min-h-screen  flex-col bg-gradient-to-b from-black via-Gray-900 to-[#0B0D26] lg:flex-row lg:h-[70vh] lg:justify-between text-white py-10 px-4 justify-center items-center">
         <div className="social flex mb-[2em] flex-col justify-center  w-full lg:w-1/3  items-center text-center">
           <h4 className="text-3xl my-3 font-medium text-center flex align-center">
             Social Media
