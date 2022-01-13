@@ -20,7 +20,7 @@ const Navbar = () => {
     <div
       navScroll={navScroll}
       className={`flex w-full fixed z-20 ${
-        navScroll ? "bg-Gray-900" : ""
+        navScroll ? "backdrop-blur-xl" : ""
       } text-white items-center justify-between px-6 py-4`}
     >
       <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-Cyan-500 to-Blue-500">

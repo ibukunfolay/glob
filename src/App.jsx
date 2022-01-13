@@ -1,20 +1,18 @@
-import Cards from "./Components/Cards";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
-import Strips from "./Components/Strips";
-import Youtube from "./Components/Youtube";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./Pages/Landing";
+import Signup from "./Pages/Sign";
+import Signin from "./Pages/Signin";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Header />
-      <Cards />
-      <Youtube />
-      <Strips />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Signin />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

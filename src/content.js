@@ -8,8 +8,8 @@ export default {
       { text: "Contact", to: "Contact" },
     ],
     auth: [
-      { text: "Login", to: "login" },
-      { text: "SignUP", to: "SignUP" },
+      { text: "Login", to: "/login" },
+      { text: "Sign up", to: "/signup" },
     ],
   },
 };

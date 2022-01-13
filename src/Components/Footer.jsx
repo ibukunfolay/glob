@@ -77,11 +77,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bottom flex text-center flex-col lg:flex-row lg:justify-between min-h-fit bg-[#000] text-white justify-center align-center px-6 py-4">
-        <div>&copy;Copyright GrandWealth 2022, All Rights Reserved</div>
+      <div className="bottom flex font-small text-center flex-col lg:flex-row lg:justify-between min-h-fit bg-[#000] text-white justify-center align-center px-6 py-4">
+        <div>&copy; Copyright GrandWealth 2022, All Rights Reserved</div>
         <div>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
+          <a href="#" className="mx-2">
+            Terms & Conditions
+          </a>
+          <a href="#" className="mx-2">
+            Privacy Policy
+          </a>
         </div>
       </div>
     </div>
