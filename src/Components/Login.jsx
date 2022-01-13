@@ -1,6 +1,10 @@
 import React from "react";
+import { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div className="min-h-screen w-full flex justify-between items-center mx-auto bg-gradient-to-br from-black via-Gray-800 to-[#0B0D26]">
       <div className="image invisible md:visible md:w-1/2 h-[100vh] bg-[url('https://images.pexels.com/photos/4464438/pexels-photo-4464438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')] bg-center bg-cover bg-no-repeat"></div>
@@ -13,6 +17,10 @@ const Login = () => {
         <div className="border-b-2 border-Pink-300 mb-[1.5em]">
           <input
             type="text"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             placeholder="Enter Email or username"
             className="bg-transparent text-xl py-2 px-3 outline-none text-white text-opacity-50 mb-4"
           />
@@ -20,6 +28,10 @@ const Login = () => {
         <div className="border-b-2 border-Pink-300 mb-[1.5em]">
           <input
             type="text"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
             placeholder="Enter Password"
             className="bg-transparent text-xl py-2 px-3 outline-none text-white text-opacity-50 mb-4"
           />

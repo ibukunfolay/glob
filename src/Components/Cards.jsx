@@ -17,39 +17,45 @@ const Cards = () => {
         </p>
       </div>
       <div className="cards lg:w-3/5 flex flex-wrap justify-center w-full">
-        <div className="card inset-x-2 mb-10 shadow-xl flex-col text-left mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full">
           <img src={pic1} alt="" className="h-8 w-9 " />
-          <h3 className="text-2xl font-medium my-3">Create Account</h3>
-          <p className="text-base font-small opacity-">
+          <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
+            Create Account
+          </h3>
+          <p className="text-base font-bold text-Gray-700 text-opacity-50">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
             amet alias suscipit placeat cumque odio qui quibusdam quis expedita
             nam?
           </p>
         </div>
-        <div className="card inset-x-2 mb-10 shadow-xl flex-col text-left mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full ">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full ">
           <img src={pic2} alt="" className="h-8 w-9 " />
-          <h3 className="text-2xl font-medium my-3">
+          <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
             Save & Get your money working
           </h3>
-          <p className="text-base font-small opacity-">
+          <p className="text-base font-bold text-Gray-700 text-opacity-50">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
             amet alias suscipit placeat cumque odio qui quibusdam quis expedita
             nam?
           </p>
         </div>
-        <div className="card inset-x-2 mb-10 shadow-xl flex-col text-left  mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left  mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full">
           <img src={pic3} alt="" className="h-8 w-9 " />
-          <h3 className="text-2xl font-medium my-3">Invest & Loan</h3>
-          <p className="text-base font-small opacity-">
+          <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
+            Invest & Loan
+          </h3>
+          <p className="text-base font-bold text-Gray-700 text-opacity-50">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
             amet alias suscipit placeat cumque odio qui quibusdam quis expedita
             nam?
           </p>
         </div>
-        <div className="card inset-x-2 mb-10 shadow-xl flex-col text-left  mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left  mx-6 mr-8  px-5 py-6 h-auto lg:w-64 w-full">
           <img src={pic4} alt="" className="h-8 w-9 " />
-          <h3 className="text-2xl font-medium my-3">Withdraw</h3>
-          <p className="text-base font-small opacity-">
+          <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
+            Withdraw
+          </h3>
+          <p className="text-base font-bold text-Gray-700 text-opacity-50">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
             amet alias suscipit placeat cumque odio qui quibusdam quis expedita
             nam?
