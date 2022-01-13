@@ -36,6 +36,7 @@ const Header = () => {
         autoPlay
         muted
         loop
+        playsInline
       />
       <img
         className="w-full absolute inset-x-0 bottom-0 h-16"
