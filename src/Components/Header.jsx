@@ -5,7 +5,7 @@ import wave from "../Assets/wave.png";
 
 const Header = () => {
   return (
-    <div className="min-h-screen flex relative w-full flex-col py-4 px-6 items-center justify-center">
+    <div className="min-h-screen flex relative  w-full flex-col py-4 px-6 items-center justify-center">
       <div className="flex flex-col-reverse lg:flex-row items-center py-10 mx-auto w-full text-white">
         <div className="text-center lg:text-left lg:w-1/2 w-3/4 mx-auto mb-[2em]">
           <h2 className="text-white text-5xl mb-[.2em] font-bold">
@@ -38,11 +38,11 @@ const Header = () => {
         loop
         playsInline
       />
-      <img
+      {/* <img
         className="w-full absolute inset-x-0 bottom-0 h-16"
         src={wave}
         alt="wave"
-      />
+      /> */}
     </div>
   );
 };
