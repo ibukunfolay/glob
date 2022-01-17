@@ -48,7 +48,7 @@ const Login = () => {
           </div>
           <div className="flex justify-center items-center text-white text-small font-semibold ">
             create an account? &nbsp;
-            <a href="/login" className="text-[#328CF0] font-bold">
+            <a href="/signup" className="text-[#328CF0] font-bold">
               sign up
             </a>
           </div>
