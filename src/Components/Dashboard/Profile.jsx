@@ -10,7 +10,7 @@ export default function Profile() {
         <img src={image} alt="" />
       </div>
       <div className="title">
-        <h2>Kisha Dennings</h2>
+        <h2>Jide Olaoti</h2>
         <h5>
           <HiOutlineLocationMarker /> New York, USA
         </h5>

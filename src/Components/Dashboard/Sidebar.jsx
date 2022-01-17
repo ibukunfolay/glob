@@ -163,7 +163,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <RiDashboard2Fill />
-                <span> Riders</span>
+                <span>Fund wallet</span>
               </a>
             </li>
             <li
@@ -172,7 +172,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <FaAddressCard />
-                <span> Payment Details</span>
+                <span> Investments</span>
               </a>
             </li>
             <li
@@ -181,7 +181,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <GiTwirlCenter />
-                <span> Learning Center</span>
+                <span> Loans</span>
               </a>
             </li>
             <li
@@ -190,7 +190,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <BsFillChatTextFill />
-                <span> FAQs</span>
+                <span> Transactions</span>
               </a>
             </li>
             <li
@@ -199,7 +199,25 @@ export default function Sidebar() {
             >
               <a href="#">
                 <IoSettings />
-                <span> Settings</span>
+                <span> Wallet</span>
+              </a>
+            </li>
+            <li
+              className={currentLink === 7 ? "active" : "none"}
+              onClick={() => setCurrentLink(7)}
+            >
+              <a href="#">
+                <IoSettings />
+                <span> Bank Info</span>
+              </a>
+            </li>
+            <li
+              className={currentLink === 8 ? "active" : "none"}
+              onClick={() => setCurrentLink(8)}
+            >
+              <a href="#">
+                <IoSettings />
+                <span> Withdrawal</span>
               </a>
             </li>
           </ul>
@@ -236,7 +254,7 @@ const Section = styled.section`
       align-items: center;
       gap: 2rem;
       svg {
-        color: #ffc107;
+        color: #23bab1;
         font-size: 2rem;
       }
       span {
