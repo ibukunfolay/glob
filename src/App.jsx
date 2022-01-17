@@ -17,7 +17,7 @@ const App = () => {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen w-full justify-center item-center">
+      <div className="flex min-h-auto pt-[15em] w-auto justify-center align-center">
         <img src={gif}></img>
       </div>
     );
