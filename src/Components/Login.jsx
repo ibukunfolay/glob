@@ -7,7 +7,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen relative flex flex-col py-10 bg-gradient-to-b from-black to-[#0B0D26]">
-      <div className="flex w-full justify-between items-center mx-4 mx-auto ">
+      <div className="flex w-full justify-between items-center mx-auto ">
         <div className="image invisible md:visible md:w-1/2 h-[100vh] bg-[url('https://images.pexels.com/photos/4464438/pexels-photo-4464438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')] bg-center bg-cover bg-no-repeat"></div>
         <div className="box flex flex-col md:w-1/3 sm:w-3/5 w-full  justify-center px-10 py-8 mx-auto backdrop-blur-2xl bg-black rounded-xl">
           <div className=" mb-[2em] border-b-4 border-solid border-Blue-500 ">
