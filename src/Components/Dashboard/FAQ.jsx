@@ -23,7 +23,7 @@ export default function FAQ() {
   return (
     <Section>
       <div className="title">
-        <h2>Information for drivers</h2>
+        <h2>More Information</h2>
       </div>
       <div className="faqs">
         {faqs.map((faq) => {

@@ -133,7 +133,9 @@ const Section = styled.section`
     .transactions {
       .transaction {
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        // align-items: center;
         gap: 1rem;
       }
     }
