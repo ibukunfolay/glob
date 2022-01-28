@@ -174,6 +174,11 @@ const Section = styled.section`
   justify-content: space-between;
   padding: 2rem 0;
   gap: 2rem;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
   .top {
     display: flex;
     flex-direction: column;
@@ -285,6 +290,11 @@ const ResponsiveNav = styled.div`
   opacity: 0;
   visibility: hidden;
   padding: 1rem;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
   .responsive__links {
     display: flex;
     margin-top: 3em;
