@@ -1,81 +1,60 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Dashhome from "./Main/Dashhome";
+import Sidebar from "./Sidebar";
 import styled from "styled-components";
-import Analytics from "./Analytics";
-import Earnings from "./Earnings";
-import FAQ from "./FAQ";
-import Navbar from "./Navbar";
-import Profile from "./Profile";
-import Transfers from "./Transfers";
-import scrollreveal from "scrollreveal";
-export default function Dashboard() {
-  useEffect(() => {
-    const sr = scrollreveal({
-      origin: "bottom",
-      distance: "80px",
-      duration: 2000,
-      reset: false,
-    });
-    sr.reveal(
-      `
-        nav,
-        .row__one,
-        .row__two
-    `,
-      {
-        opacity: 0,
-        interval: 100,
-      }
-    );
-  }, []);
-  return (
-    <Section>
-      <Navbar />
-      <div className="grid">
-        <div className="row__one">
-          <Analytics />
-          <FAQ />
-        </div>
-        <div className="row__two">
-          <Earnings />
-          <Transfers />
-          <Profile />
-        </div>
-      </div>
-    </Section>
-  );
-}
+import Fundwallet from "./Fundwallet/FundWallet";
+import Investments from "./Investment/Investment";
+import Loans from "./Loans/Loans";
+import Withdrawal from "./Withdrawal/Withdrawal";
+import Bankinfo from "./Bank info/Bankinfo";
+import Wallet from "./Wallet/Wallet";
+import Transactions from "./Transactions/Transactions";
 
-const Section = styled.section`
+const Dashboard = () => {
+  return (
+    <div>
+      <DashMain>
+        <Switch>
+          <Route exact path="/dashboard/home">
+            <Dashhome />
+          </Route>
+          <Route exact path="/dashboard/fund-wallet">
+            <Fundwallet />
+          </Route>
+          <Route exact path="/dashboard/investments">
+            <Investments />
+          </Route>
+          <Route exact path="/dashboard/loans">
+            <Loans />
+          </Route>
+          <Route exact path="/dashboard/transactions">
+            <Transactions />
+          </Route>
+          <Route exact path="/dashboard/wallet">
+            <Wallet />
+          </Route>
+          <Route exact path="/dashboard/bank-info">
+            <Bankinfo />
+          </Route>
+          <Route exact path="/dashboard/withdrawal">
+            <Withdrawal />
+          </Route>
+        </Switch>
+      </DashMain>
+    </div>
+  );
+};
+
+export default Dashboard;
+
+const DashMain = styled.div`
   margin-left: 18vw;
   padding: 2rem;
-  height: 100%;
+  min-height: 100vh;
   background-color: #000;
-  .grid {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    gap: 1rem;
-    margin-top: 2rem;
-    .row__one {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      height: 50%;
-      gap: 1rem;
-    }
-    .row__two {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      height: 50%;
-    }
-  }
+  color: #fff;
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     margin-left: 0;
-    .grid {
-      .row__one,
-      .row__two {
-        grid-template-columns: 1fr;
-      }
-    }
   }
 `;

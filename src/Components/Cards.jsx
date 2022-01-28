@@ -17,7 +17,7 @@ const Cards = () => {
         </p>
       </div>
       <div className="cards lg:w-3/5 flex flex-wrap justify-center w-full">
-        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left lg:mx-6  lg:mr-8  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left lg:mx-2  lg:mr-3  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full">
           <img src={pic1} alt="" className="h-8 w-9 " />
           <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
             Create Account
@@ -28,7 +28,7 @@ const Cards = () => {
             nam?
           </p>
         </div>
-        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left lg:mx-6  lg:mr-8  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full ">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left lg:mx-2  lg:mr-3  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full ">
           <img src={pic2} alt="" className="h-8 w-9 " />
           <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
             Save & Get your money working
@@ -39,7 +39,7 @@ const Cards = () => {
             nam?
           </p>
         </div>
-        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left  lg:mx-6  lg:mr-8  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left  lg:mx-2  lg:mr-3  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full">
           <img src={pic3} alt="" className="h-8 w-9 " />
           <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
             Invest & Loan
@@ -50,7 +50,7 @@ const Cards = () => {
             nam?
           </p>
         </div>
-        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left  lg:mx-6  lg:mr-8  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full">
+        <div className="card inset-x-2 mb-10 shadow-2xl flex-col text-left  lg:mx-2  lg:mr-3  lg:px-5 px-5 py-6 h-auto lg:w-[20em] w-full">
           <img src={pic4} alt="" className="h-8 w-9 " />
           <h3 className="text-2xl font-bold text-Gray-700 text-opacity-100 my-3">
             Withdraw

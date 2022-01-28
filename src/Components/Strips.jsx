@@ -38,7 +38,7 @@ const Strips = () => {
   };
 
   return (
-    <div className="flex lg:flex-row flex-col px-[2em] py-[3em] lg:items-center lg:justify-between">
+    <div className="flex lg:flex-row flex-col px-[2em] lg:px-[4em] py-[3em] lg:items-center lg:justify-between">
       <div className="doughnut flex flex-col items-center mb-[3em]">
         <h1 className="text-center flex font-bold text-2xl mb-[1em]">
           Lorem ipsum dolor.

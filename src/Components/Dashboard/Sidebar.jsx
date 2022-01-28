@@ -10,8 +10,8 @@ import { FiLogOut } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import scrollreveal from "scrollreveal";
+import { NavLink as Link } from "react-router-dom";
 export default function Sidebar() {
-  const [currentLink, setCurrentLink] = useState(1);
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
@@ -62,80 +62,45 @@ export default function Sidebar() {
             )}
           </div>
           <div className="links">
-            <ul>
-              <li
-                className={currentLink === 1 ? "active" : "none"}
-                onClick={() => setCurrentLink(1)}
-              >
-                <a href="#">
-                  <MdSpaceDashboard />
-                  <span> Dashboard</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 2 ? "active" : "none"}
-                onClick={() => setCurrentLink(2)}
-              >
-                <a href="#">
-                  <RiDashboard2Fill />
-                  <span>Fund wallet</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 3 ? "active" : "none"}
-                onClick={() => setCurrentLink(3)}
-              >
-                <a href="#">
-                  <FaAddressCard />
-                  <span> Investments</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 4 ? "active" : "none"}
-                onClick={() => setCurrentLink(4)}
-              >
-                <a href="#">
-                  <GiTwirlCenter />
-                  <span> Loans</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 5 ? "active" : "none"}
-                onClick={() => setCurrentLink(5)}
-              >
-                <a href="#">
-                  <BsFillChatTextFill />
-                  <span> Transactions</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 6 ? "active" : "none"}
-                onClick={() => setCurrentLink(6)}
-              >
-                <a href="#">
-                  <IoSettings />
-                  <span> Wallet</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 7 ? "active" : "none"}
-                onClick={() => setCurrentLink(7)}
-              >
-                <a href="#">
-                  <IoSettings />
-                  <span> Bank Info</span>
-                </a>
-              </li>
-              <li
-                className={currentLink === 8 ? "active" : "none"}
-                onClick={() => setCurrentLink(8)}
-              >
-                <a href="#">
-                  <IoSettings />
-                  <span> Withdrawal</span>
-                </a>
-              </li>
-            </ul>
+            <Link className="a" to="/dashboard/home">
+              <MdSpaceDashboard />
+              <span> Dashboard</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/fund-wallet">
+              <RiDashboard2Fill />
+              <span>Fund wallet</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/investments">
+              <FaAddressCard />
+              <span> Investments</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/loans">
+              <GiTwirlCenter />
+              <span> Loans</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/transactions">
+              <BsFillChatTextFill />
+              <span> Transactions</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/wallet">
+              <IoSettings />
+              <span> Wallet</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/bank-info">
+              <IoSettings />
+              <span> Bank Info</span>
+            </Link>
+
+            <Link className="a" to="/dashboard/withdrawal">
+              <IoSettings />
+              <span> Withdrawal</span>
+            </Link>
           </div>
         </div>
         <div className="logout">
@@ -147,80 +112,51 @@ export default function Sidebar() {
       </Section>
       <ResponsiveNav state={navbarState} className={navbarState ? "show" : ""}>
         <div className="responsive__links">
-          <ul>
-            <li
-              className={currentLink === 1 ? "active" : "none"}
-              onClick={() => setCurrentLink(1)}
-            >
-              <a href="#">
-                <MdSpaceDashboard />
-                <span> Dashboard</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 2 ? "active" : "none"}
-              onClick={() => setCurrentLink(2)}
-            >
-              <a href="#">
-                <RiDashboard2Fill />
-                <span>Fund wallet</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 3 ? "active" : "none"}
-              onClick={() => setCurrentLink(3)}
-            >
-              <a href="#">
-                <FaAddressCard />
-                <span> Investments</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 4 ? "active" : "none"}
-              onClick={() => setCurrentLink(4)}
-            >
-              <a href="#">
-                <GiTwirlCenter />
-                <span> Loans</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 5 ? "active" : "none"}
-              onClick={() => setCurrentLink(5)}
-            >
-              <a href="#">
-                <BsFillChatTextFill />
-                <span> Transactions</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 6 ? "active" : "none"}
-              onClick={() => setCurrentLink(6)}
-            >
-              <a href="#">
-                <IoSettings />
-                <span> Wallet</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 7 ? "active" : "none"}
-              onClick={() => setCurrentLink(7)}
-            >
-              <a href="#">
-                <IoSettings />
-                <span> Bank Info</span>
-              </a>
-            </li>
-            <li
-              className={currentLink === 8 ? "active" : "none"}
-              onClick={() => setCurrentLink(8)}
-            >
-              <a href="#">
-                <IoSettings />
-                <span> Withdrawal</span>
-              </a>
-            </li>
-          </ul>
+          <Link className="a" to="/dashboard/home">
+            <MdSpaceDashboard />
+            <span> Dashboard</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/fund-wallet">
+            <RiDashboard2Fill />
+            <span>Fund wallet</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/investments">
+            <FaAddressCard />
+            <span> Investments</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/loans">
+            <GiTwirlCenter />
+            <span> Loans</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/transactions">
+            <BsFillChatTextFill />
+            <span> Transactions</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/wallet">
+            <IoSettings />
+            <span> Wallet</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/bank-info">
+            <IoSettings />
+            <span> Bank Info</span>
+          </Link>
+
+          <Link className="a" to="/dashboard/withdrawal">
+            <IoSettings />
+            <span> Withdrawal</span>
+          </Link>
+          <div className="logout">
+            <a href="#">
+              <FiLogOut />
+              <span className="logout">Logout</span>
+            </a>
+          </div>
         </div>
       </ResponsiveNav>
     </>
@@ -266,33 +202,27 @@ const Section = styled.section`
     .links {
       display: flex;
       justify-content: flex-start;
-      padding-left: 2em;
-      ul {
-        list-style-type: none;
+      // padding: 2em;
+      margin: 0.2em auto;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .a {
+        text-decoration: none;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         gap: 1rem;
-        li {
-          padding: 0.6rem 1rem;
-          border-radius: 0.6rem;
-          &:hover {
-            background-color: #23bab1;
-            a {
-              color: black;
-            }
-          }
-          a {
-            text-decoration: none;
-            display: flex;
-            gap: 1rem;
-            color: white;
-          }
-        }
-        .active {
+        color: white;
+        padding: 0.6rem 2rem;
+        border-radius: 0.6rem;
+        &:hover {
           background-color: #23bab1;
-          a {
-            color: black;
-          }
+          color: black;
+        }
+        &.active {
+          background-color: #23bab1;
+          color: black;
         }
       }
     }
@@ -315,7 +245,7 @@ const Section = styled.section`
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     position: initial;
     width: 100%;
-    height: max-content;
+    height: 100%;
     padding: 1rem;
     .top {
       flex-direction: row;
@@ -356,33 +286,26 @@ const ResponsiveNav = styled.div`
   visibility: hidden;
   padding: 1rem;
   .responsive__links {
-    ul {
-      list-style-type: none;
+    display: flex;
+    margin-top: 3em;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    .a {
       display: flex;
-      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       gap: 1rem;
-      margin-top: 3rem;
-      li {
-        padding: 0.6rem 1rem;
-        border-radius: 0.6rem;
-        &:hover {
-          background-color: #23bab1;
-          a {
-            color: black;
-          }
-        }
-        a {
-          text-decoration: none;
-          display: flex;
-          gap: 1rem;
-          color: white;
-        }
-      }
-      .active {
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 0.6rem;
+      &:hover {
         background-color: #23bab1;
-        a {
-          color: black;
-        }
+        color: black;
+      }
+      &.active {
+        background-color: #23bab1;
+        color: black;
       }
     }
   }
