@@ -18,7 +18,7 @@ const Wallet = () => {
   };
 
   return (
-    <div className="bg-[#212121] min-h-screen px-8 py-4">
+    <div className="bg-[#212121] min-h-screen px-4 lg:px-8 py-4">
       <div className=" flex flex-col lg:flex-row mb-[5em]">
         <div className="inline-flex lg:mr-4 mb-[1em] lg:mb-0 items-center rounded-md font-medium border-2 border-solid border-Yellow-600 px-4 py-2 text-xl text-Yellow-600 hover:text-white hover:bg-Yellow-600 hover:shadow-[0_35px_60px_-15px_rgba(231, 193, 78, 0.9)]">
           <AiOutlinePlusSquare className="text-xl mr-1" />

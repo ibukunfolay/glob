@@ -18,7 +18,7 @@ const Investment = () => {
   };
 
   return (
-    <div className="bg-[#212121] min-h-screen px-8 py-4">
+    <div className="bg-[#212121] min-h-screen px-4 lg:px-8 py-4">
       <div className="inline-flex mb-[5em] items-center rounded-md font-medium border-2 border-solid border-Yellow-600 px-2 py-1 text-Yellow-600 hover:text-white hover:bg-Yellow-600 hover:shadow-[0_35px_60px_-15px_rgba(231, 193, 78, 0.9)]">
         <AiOutlinePlusSquare className="text-xl mr-1" />
         New Investment

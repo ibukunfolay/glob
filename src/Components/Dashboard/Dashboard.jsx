@@ -50,7 +50,7 @@ export default Dashboard;
 
 const DashMain = styled.div`
   margin-left: 18vw;
-  padding: 2rem;
+  padding: 2em 1em;
   min-height: 100vh;
   background-color: #000;
   color: #fff;
