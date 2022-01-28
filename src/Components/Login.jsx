@@ -1,60 +1,129 @@
 import React from "react";
 import { useState } from "react";
+import { BiLockAlt } from "react-icons/bi";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   return (
-    <div className="min-h-screen relative flex flex-col py-10 bg-gradient-to-b from-black to-[#0B0D26]">
-      <div className="flex w-full justify-between items-center mx-auto ">
-        <div className="image invisible md:visible md:w-1/2 h-[100vh] bg-[url('https://images.pexels.com/photos/4464438/pexels-photo-4464438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')] bg-center bg-cover bg-no-repeat"></div>
-        <div className="box flex flex-col md:w-1/3 sm:w-3/5 w-full  justify-center px-10 py-8 mx-auto backdrop-blur-2xl bg-black rounded-xl">
-          <div className=" mb-[2em] border-b-4 border-solid border-Blue-500 ">
-            <h1 className="font-bold text-4xl text-white text-center mb-2 ">
-              Log In
-            </h1>
-          </div>
-          <div className=" flex flex-col border-b-2 border-Pink-300 mb-[1.5em]">
-            <label htmlFor="email" className="text-white font-semibold mb-1">
-              Email:
-            </label>
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              placeholder="Enter Email or username"
-              className="bg-transparent text-xl py-2 px-3 outline-none text-white text-opacity-50 mb-4"
+    <div className="relative">
+      <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            <img
+              className="mx-auto h-12 w-auto"
+              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+              alt="Workflow"
             />
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              Sign in to your account
+            </h2>
+            <p className="mt-2 text-center text-sm text-gray-600">
+              Or{" "}
+              <a
+                href="#"
+                className="font-medium text-indigo-600 hover:text-indigo-500"
+              >
+                start your 14-day free trial
+              </a>
+            </p>
           </div>
-          <div className=" flex flex-col border-b-2 border-Pink-300 mb-[1.5em]">
-            <label htmlFor="password" className="text-white font-semibold mb-1">
-              Password:
-            </label>
-            <input
-              type="text"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-              placeholder="Enter Password"
-              className="bg-transparent text-xl py-2 px-3 outline-none text-white text-opacity-50 mb-4"
-            />
-          </div>
-          <div className="my-4 text-center bg-gradient-to-r from-Cyan-500 to-Blue-500 px-6 py-3 rounded-full">
-            <button className="text-3xl text-white font-bold">Submit</button>
-          </div>
-          <div className="flex justify-center items-center text-white text-small font-semibold ">
-            create an account? &nbsp;
-            <a href="/signup" className="text-[#328CF0] font-bold">
-              sign up
-            </a>
-          </div>
+          <form
+            className="mt-8 space-y-6 border border-solid  py-[2em] rounded-lg shadow-default px-8 "
+            action="#"
+            method="POST"
+          >
+            <input type="hidden" name="remember" defaultValue="true" />
+            <div className="rounded-md shadow-sm -space-y-px">
+              <div>
+                <label htmlFor="email-address" className="sr-only">
+                  Email address
+                </label>
+                <input
+                  id="email-address"
+                  name="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  autoComplete="email"
+                  required
+                  className="appearance-none mb-4 shadow-inner rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Email address"
+                />
+              </div>
+              <div>
+                <label htmlFor="password" className="sr-only">
+                  Password
+                </label>
+                <input
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  className="appearance-none mb-4 shadow-inner rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                />
+                <label
+                  htmlFor="remember-me"
+                  className="ml-2 block text-sm text-gray-900"
+                >
+                  Remember me
+                </label>
+              </div>
+
+              <div className="text-sm">
+                <a
+                  href="#"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  Forgot your password?
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-Indigo-600 hover:bg-Indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+                  <BiLockAlt
+                    className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                    aria-hidden="true"
+                  />
+                </span>
+                Sign in
+              </button>
+            </div>
+            <div className="flex justify-center items-center text-black text-small font-semibold ">
+              Create an account? &nbsp;
+              <a href="/signup" className="text-[#328CF0] font-bold">
+                sign in
+              </a>
+            </div>
+          </form>
         </div>
       </div>
-      <div className="text-white ml-4 absolute bottom-0 font-semibold text-opacity-75">
+      <div className="text-black ml-4 absolute bottom-0 font-semibold text-opacity-75">
         &copy; Copyright Capital Equity Funds, 2022.
       </div>
     </div>

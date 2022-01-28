@@ -27,12 +27,13 @@ export default function Sidebar() {
     sr.reveal(
       `
           .brand,
-          .links>ul>li:nth-of-type(1),
-      .links>ul>li:nth-of-type(2),
-      .links>ul>li:nth-of-type(3),
-      .links>ul>li:nth-of-type(4),
-      .links>ul>li:nth-of-type(5),
-      .links>ul>li:nth-of-type(6),
+          .links>a:nth-of-type(1),
+      .links>a:nth-of-type(2),
+      .links>a:nth-of-type(3),
+      .links>a:nth-of-type(4),
+      .links>a:nth-of-type(5),
+      .links>a:nth-of-type(6),
+      .links>a:nth-of-type(7),
       .logout
       `,
       {
@@ -92,11 +93,6 @@ export default function Sidebar() {
               <span> Wallet</span>
             </Link>
 
-            <Link className="a" to="/dashboard/bank-info">
-              <IoSettings />
-              <span> Bank Info</span>
-            </Link>
-
             <Link className="a" to="/dashboard/withdrawal">
               <IoSettings />
               <span> Withdrawal</span>
@@ -140,11 +136,6 @@ export default function Sidebar() {
           <Link className="a" to="/dashboard/wallet">
             <IoSettings />
             <span> Wallet</span>
-          </Link>
-
-          <Link className="a" to="/dashboard/bank-info">
-            <IoSettings />
-            <span> Bank Info</span>
           </Link>
 
           <Link className="a" to="/dashboard/withdrawal">

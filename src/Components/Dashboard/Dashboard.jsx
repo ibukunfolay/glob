@@ -7,7 +7,6 @@ import Fundwallet from "./Fundwallet/FundWallet";
 import Investments from "./Investment/Investment";
 import Loans from "./Loans/Loans";
 import Withdrawal from "./Withdrawal/Withdrawal";
-import Bankinfo from "./Bank info/Bankinfo";
 import Wallet from "./Wallet/Wallet";
 import Transactions from "./Transactions/Transactions";
 
@@ -33,9 +32,6 @@ const Dashboard = () => {
           </Route>
           <Route exact path="/dashboard/wallet">
             <Wallet />
-          </Route>
-          <Route exact path="/dashboard/bank-info">
-            <Bankinfo />
           </Route>
           <Route exact path="/dashboard/withdrawal">
             <Withdrawal />
