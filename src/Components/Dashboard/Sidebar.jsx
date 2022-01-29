@@ -192,7 +192,7 @@ const Section = styled.section`
       span {
         font-size: 2rem;
         color: #23bab1;
-        font-family: "Permanent Marker", cursive;
+        // font-family: "Permanent Marker", cursive;
       }
     }
     .links {
