@@ -26,7 +26,7 @@ const Nav = styled.nav`
       span {
         margin-left: 0.5rem;
         color: #23bab1;
-        font-family: "Permanent Marker", cursive;
+        // font-family: "Permanent Marker", cursive;
         letter-spacing: 0.2rem;
       }
     }
@@ -45,14 +45,14 @@ const Nav = styled.nav`
       background-color: transparent;
       border: none;
       color: #23bab1;
-      font-family: "Permanent Marker", cursive;
+      // font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
       &:focus {
         outline: none;
       }
       &::placeholder {
         color: #23bab1;
-        font-family: "Permanent Marker", cursive;
+        // font-family: "Permanent Marker", cursive;
       }
     }
   }
