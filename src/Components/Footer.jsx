@@ -4,7 +4,11 @@ const Footer = () => {
   return (
     <div className="flex flex-col">
       <div className="top flex lg:min-h-full  flex-col bg-gradient-to-b from-black via-Gray-900 to-[#0B0D26] lg:flex-row lg:h-[70vh] lg:justify-between text-white py-10 px-4  justify-center items-center">
-        <div className="social flex mb-[2em] flex-col justify-center  w-full lg:w-1/3  items-center text-center">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={800}
+          className="social flex mb-[2em] flex-col justify-center  w-full lg:w-1/3  items-center text-center"
+        >
           <h4 className="text-3xl my-4 font-bold text-center flex align-center">
             Social Media
           </h4>
@@ -35,7 +39,11 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="Email flex flex-col mb-[2em] justify-center items-center w-full lg:w-1/3 ">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={1400}
+          className="Email flex flex-col mb-[2em] justify-center items-center w-full lg:w-1/3 "
+        >
           <h2 className="my-6 font-bold text-center text-3xl">
             Subscribe to our news letter
           </h2>
@@ -50,7 +58,11 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="quicklinks flex flex-col  items-center w-full lg:w-1/3 justify-center text-white">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={1800}
+          className="quicklinks flex flex-col  items-center w-full lg:w-1/3 justify-center text-white"
+        >
           <h2 className="text-3xl font-bold my-4">Quick Links</h2>
           <div className="links flex flex-wrap justify-center">
             <a href="#" className="link font-small mx-2 mb-3 lg:text-xl">

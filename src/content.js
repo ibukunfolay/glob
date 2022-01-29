@@ -1,11 +1,11 @@
 export default {
   nav: {
-    logo: "CEF",
+    logo: "Capital Equity",
     links: [
-      { text: "Invest", to: "Invest" },
-      { text: "Loan", to: "Loan" },
-      { text: "About us", to: "AboutUS" },
-      { text: "Contact", to: "Contact" },
+      { text: "Invest", to: "/invest" },
+      { text: "Loan", to: "/loan" },
+      { text: "About us", to: "/aboutus" },
+      { text: "Contact", to: "/contact" },
     ],
     auth: [
       { text: "Login", to: "/login" },

@@ -46,19 +46,35 @@ const Strips = () => {
         <Doughnut data={data} className="doughnut" options={options} />
       </div>
       <div className="strips flex flex-col ">
-        <div className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Red-300 text-opacity-25">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={800}
+          className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Red-300 text-opacity-25"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
           culpa.
         </div>
-        <div className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Cyan-300 text-opacity-25">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={1200}
+          className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Cyan-300 text-opacity-25"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
           culpa.
         </div>
-        <div className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Yellow-300 text-opacity-25">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={1600}
+          className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Yellow-300 text-opacity-25"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
           culpa.
         </div>
-        <div className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Pink-300 text-opacity-25">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={2000}
+          className="strip text-1xl font-medium bg-white shadow-xl mb-2 z-10 w-full py-5 px-4 border-l-4 border-Pink-300 text-opacity-25"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
           culpa.
         </div>

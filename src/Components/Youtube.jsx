@@ -8,12 +8,16 @@ const Youtube = () => {
           <Vidlink videoId="kW_y6JFCWsg" />
         </div>
         <div className="text-left">
-          <h1 className="text-2xl my-4">Lorem, ipsum dolor.</h1>
-          <p className="font-small">
+          <h1 data-aos="fade-up" data-aos-delay={900} className="text-2xl my-4">
+            Lorem, ipsum dolor.
+          </h1>
+          <p data-aos="fade-up" data-aos-delay={1200} className="font-small">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             dicta quos quis est culpa sit.
           </p>
           <button
+            data-aos="fade-up"
+            data-aos-delay={1500}
             type="submit"
             className="my-6 px-10 py-2 rounded-full  bg-gradient-to-r from-Cyan-500 to-Blue-500"
           >
