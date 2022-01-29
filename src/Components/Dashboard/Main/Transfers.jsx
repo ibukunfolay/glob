@@ -65,7 +65,7 @@ const Section = styled.section`
   .title {
     h2 {
       color: #23bab1;
-      font-family: "Permanent Marker", cursive;
+      // font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
     }
   }
