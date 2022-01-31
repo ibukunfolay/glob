@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
 const Withdrawal = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const [isHidden, setIsHidden] = useState(null);
+
   const person = {
     name: "Jane Cooper",
     title: "Regional Paradigm Technician",
@@ -14,7 +24,10 @@ const Withdrawal = () => {
 
   return (
     <div className="">
-      <div className="inline-flex mb-[5em] items-center rounded-md font-medium border-2 border-solid border-Yellow-600 px-2 py-1 text-Yellow-600 hover:text-white hover:bg-Yellow-600 hover:shadow-[0_35px_60px_-15px_rgba(231, 193, 78, 0.9)]">
+      <div
+        onClick={handleOpen}
+        className="inline-flex mb-[5em] items-center rounded-md font-medium border-2 border-solid border-Yellow-600 px-2 py-1 text-Yellow-600 hover:text-white hover:bg-Yellow-600 hover:shadow-[0_35px_60px_-15px_rgba(231, 193, 78, 0.9)]"
+      >
         <AiOutlinePlusSquare className="text-xl mr-1" />
         Make Withdrawal
       </div>
@@ -108,6 +121,160 @@ const Withdrawal = () => {
           </div>
         </div>
       </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        className=" rounded-md"
+      >
+        <DialogTitle
+          className="bg-[#212121] text-Teal-500 text-center font-semibold "
+          id="alert-dialog-title"
+        >
+          Make Withdrawal
+        </DialogTitle>
+        <DialogContent className="bg-[#212121]">
+          <div className="flex flex-col w-full items-center">
+            <div className="flex flex-col w-full  text-Teal-500 mx-1 mb-[0.5em]">
+              <label
+                htmlFor="withdrawal_mode"
+                className="mb-[1em] text-center "
+              >
+                Select withdrawal mode
+              </label>
+              <select
+                name="withdrawal_mode"
+                required
+                onChange={(e) => {
+                  e.target.value === "cryptocurrency"
+                    ? setIsHidden(1)
+                    : e.target.value === "bank_account"
+                    ? setIsHidden(2)
+                    : "";
+                }}
+                className=" w-full px-2 py-2 bg-[#71717a]  outline-none rounded-md text-Teal-500 mx-1 mb-[0.5em]"
+                id="withdrawal_mode"
+              >
+                <option value="">--select-mode--</option>
+                <option value="cryptocurrency">Cryptocurrency</option>
+                <option value="bank_account">Bank Account</option>
+              </select>
+            </div>
+            {isHidden === 1 ? (
+              <div className="flex flex-col w-full  text-Teal-500 mx-1 mb-[0.5em]">
+                <label htmlFor="FullName" className="mb-[1em] text-center ">
+                  Bitcoin Withdrawal
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Wallet Address"
+                  required
+                  className=" w-full px-2 py-2 bg-[#71717a]  outline-none rounded-md text-Teal-500 mx-1 mb-[0.5em]"
+                />
+              </div>
+            ) : isHidden === 2 ? (
+              <div className="">
+                <div className="mb-[2em] w-full text-Teal-500">
+                  <span className="flex ml-2 text-xl font-semibold mb-[1em]">
+                    Amount to Withdraw
+                  </span>
+                  <input
+                    className="flex w-full bg-[#71717a]  outline-none rounded-md px-2 py-2 mx-2"
+                    type="number"
+                    name="amount"
+                    id="amount"
+                  />
+                </div>
+                <div className="flex flex-wrap w-full justify-between">
+                  <div className="flex flex-col w-full lg:w-[48%]  text-Teal-500 mx-1 mb-[0.5em]">
+                    <label htmlFor="FullName" className="mb-[1em] text-center ">
+                      Bank Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Bank Name"
+                      required
+                      className=" w-full px-2 py-2 bg-[#71717a]  outline-none rounded-md text-Teal-500 mx-1 mb-[0.5em]"
+                    />
+                  </div>
+                  <div className="flex flex-col w-full lg:w-[48%]  text-Teal-500 mx-1 mb-[0.5em]">
+                    <label htmlFor="FullName" className="mb-[1em] text-center ">
+                      Account Number
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Account Number"
+                      required
+                      className=" w-full px-2 py-2 bg-[#71717a]  outline-none rounded-md text-Teal-500 mx-1 mb-[0.5em]"
+                    />
+                  </div>
+                  <div className="flex flex-col w-full lg:w-[48%]  text-Teal-500 mx-1 mb-[0.5em]">
+                    <label htmlFor="FullName" className="mb-[1em] text-center ">
+                      Date of Birth
+                    </label>
+                    <input
+                      type="date"
+                      required
+                      className=" w-full px-2 py-2 bg-[#71717a]  outline-none rounded-md text-Teal-500 mx-1 mb-[0.5em]"
+                      name="date"
+                      id="date"
+                    />
+                  </div>
+                  <div className="flex flex-col w-full lg:w-[48%]  text-Teal-500 mx-1 mb-[0.5em]">
+                    <label htmlFor="FullName" className="mb-[1em] text-center ">
+                      Sex (Gender)
+                    </label>
+                    <select
+                      name="gender"
+                      required
+                      className=" w-full px-2 py-2 bg-[#71717a]  outline-none rounded-md text-Teal-500 mx-1 mb-[0.5em]"
+                      id="gender"
+                    >
+                      <option value="male">male</option>
+                      <option value="female">female</option>
+                    </select>
+                  </div>
+                </div>
+                {/* <div className="flex items-center justify-center text-white ">
+                  <input
+                    type="checkbox"
+                    name="terms"
+                    id="terms"
+                    className="mr-2 rounded-sm"
+                  />
+                  I agree to the&nbsp;
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-Teal-500 hover:text-Teal-600"
+                  >
+                    loan privacy policy
+                  </a>
+                </div> */}
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        </DialogContent>
+        <DialogActions className="bg-[#212121]">
+          <Button
+            onClick={handleClose}
+            className="hover:bg-Teal-300 hover:text-Teal-600 text-Teal-600"
+          >
+            Cancel
+          </Button>
+          <Button
+            onClick={handleClose}
+            className="hover:bg-Teal-300 hover:text-Teal-600 text-Teal-600"
+            autoFocus
+          >
+            Submit
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };
