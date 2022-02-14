@@ -67,7 +67,7 @@ const Loans = () => {
                     Maximun Amount
                   </dt>
                   <dd className="mt-1 text-sm text-Gray-900 sm:mt-0 sm:col-span-2">
-                    $10,000.00
+                    $100,000.00
                   </dd>
                 </div>
               </dl>

@@ -1,13 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import image from "../../../Assets/profile.jpeg";
+import image2 from "../../../Assets/profile2.jpeg";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { cardStyles } from "./ReusableStyles";
 export default function Profile() {
+  const user = localStorage.getItem("user");
   return (
     <Section>
       <div className="image">
-        <img src={image} alt="" />
+        <img
+          src={
+            user.gender === "male"
+              ? image
+              : user.gender === "female"
+              ? image2
+              : image
+          }
+          alt=""
+        />
       </div>
       <div className="title">
         <h2>Jide Olaoti</h2>

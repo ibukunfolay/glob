@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import auth from "../../Routes/auth";
 import { MdSpaceDashboard } from "react-icons/md";
 import { RiDashboard2Fill } from "react-icons/ri";
 import { FaAddressCard, FaTaxi } from "react-icons/fa";
@@ -11,10 +12,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import scrollreveal from "scrollreveal";
 import { NavLink as Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Sidebar() {
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
+  let history = useHistory();
 
   useEffect(() => {
     const sr = scrollreveal({
@@ -99,7 +105,28 @@ export default function Sidebar() {
             </Link>
           </div>
         </div>
-        <div className="logout">
+        <div
+          className="logout"
+          onClick={() => {
+            auth.logout(() => {
+              setTimeout(() => {
+                history.push("/login");
+                localStorage.removeItem("user");
+              }, 3000);
+              // console.log(responseJSON);
+              toast("Logout Successful!", {
+                position: "top-right",
+                type: "success",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
+            });
+          }}
+        >
           <a href="#">
             <FiLogOut />
             <span className="logout">Logout</span>
@@ -142,10 +169,31 @@ export default function Sidebar() {
             <IoSettings />
             <span> Withdrawal</span>
           </Link>
-          <div className="logout">
+          <div
+            className="logou"
+            onClick={() => {
+              auth.logout(() => {
+                setTimeout(() => {
+                  localStorage.removeItem("user");
+                  history.push("/login");
+                }, 3000);
+                // console.log(responseJSON);
+                toast("Logout Successful!", {
+                  position: "top-right",
+                  type: "success",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                });
+              });
+            }}
+          >
             <a href="#">
               <FiLogOut />
-              <span className="logout">Logout</span>
+              <span className="logou">Logout</span>
             </a>
           </div>
         </div>
@@ -307,6 +355,20 @@ const ResponsiveNav = styled.div`
       &.active {
         background-color: #23bab1;
         color: black;
+      }
+    }
+    .logou {
+      padding: 0.3rem 1rem;
+      border-radius: 0.6rem;
+      &:hover {
+        background-color: #da0037;
+      }
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: white;
       }
     }
   }

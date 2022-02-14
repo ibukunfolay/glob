@@ -8,20 +8,17 @@ import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Login = () => {
-  const { register, handleSubmit, errors } = useForm();
+const ResetPassword = () => {
   let history = useHistory();
+  const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
-    PostData("users/login", data).then((result) => {
+    PostData("users/change-password/:id", data).then((result) => {
       let responseJSON = JSON.stringify(result);
-      if (result.user) {
-        auth.login(() => {
-          localStorage.setItem("user", responseJSON);
-          setTimeout(() => {
-            history.push("/dashboard/home");
-          }, 3000);
-          toast("Login Successful!", {
+      if (responseJSON.user) {
+        console.log(result);
+        setTimeout(() => {
+          toast("Password reset Successful!", {
             position: "top-right",
             type: "success",
             autoClose: 5000,
@@ -31,8 +28,8 @@ const Login = () => {
             draggable: true,
             progress: undefined,
           });
-        });
-        console.log(result);
+        }, 5000);
+        history.push("/login");
       } else {
         console.log(result);
         toast(`${result.message}`, {
@@ -55,15 +52,13 @@ const Login = () => {
       <div className="min-h-screen flex items-center bg-gradient-to-r from-Blue-500 to-Teal-500 justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8 ">
           <div>
-            <a href="/">
-              <img
-                className="mx-auto h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
-                alt="Workflow"
-              />
-            </a>
+            <img
+              className="mx-auto h-12 w-auto"
+              src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
+              alt="Workflow"
+            />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
-              Sign in to your account
+              Reset Password
             </h2>
             {/* <p className="mt-2 text-center text-sm text-gray-600">
               Or{" "}
@@ -83,63 +78,49 @@ const Login = () => {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
+                <label htmlFor="oldPassword" className="sr-only">
+                  Old Password
                 </label>
+                {errors.oldPassword && <p>{errors.oldPassword.message}</p>}
                 <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  ref={register}
-                  autoComplete="email"
-                  required
-                  className="appearance-none mb-4 shadow-inner rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-Indigo-500 focus:border-Indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email address"
-                />
-              </div>
-              <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
-                {errors.password && <p>{errors.password.message}</p>}
-                <input
-                  id="password"
-                  name="password"
+                  id="oldPassword"
+                  name="oldPassword"
                   ref={register({
                     required: "Password Required",
+                    minLength: {
+                      value: 8,
+                      message: "Too short",
+                    },
                   })}
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="appearance-none mb-4 shadow-inner rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-Indigo-500 focus:border-Indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Password"
+                  className="appearance-none mb-4 shadow-inner rounded-md relative block w-full px-3 py-2 border border-Gray-300 placeholder-Gray-500 text-Gray-900 rounded-b-md focus:outline-none focus:ring-Indigo-500 focus:border-Indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Old Password"
                 />
               </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 text-Indigo-600 focus:ring-Indigo-500 border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-900"
-                >
-                  Remember me
+              <div>
+                <label htmlFor="newPassword" className="sr-only">
+                  New Password
                 </label>
-              </div>
-
-              <div className="text-sm">
-                <a
-                  href="/reset-password"
-                  className="font-medium text-Blue-500 hover:text-Blue-700 "
-                >
-                  Forgot your password?
-                </a>
+                {errors.newPassword && <p>{errors.newPassword.message}</p>}
+                <input
+                  id="newPassword"
+                  name="newPassword"
+                  ref={register({
+                    required: "Password Required",
+                    validate: {
+                      passwordEqual: (value) =>
+                        value === getValues().password ||
+                        "Passwords do not Match!",
+                    },
+                  })}
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  className="appearance-none mb-4 shadow-inner rounded-md relative block w-full px-3 py-2 border border-Gray-300 placeholder-Gray-500 text-Gray-900 rounded-b-md focus:outline-none focus:ring-Indigo-500 focus:border-Indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="New Password"
+                />
               </div>
             </div>
 
@@ -155,13 +136,13 @@ const Login = () => {
                     aria-hidden="true"
                   />
                 </span>
-                Sign in
+                Reset Password
               </button>
             </div>
             <div className="flex justify-center items-center text-black font-base text-sm ">
-              Create an account? &nbsp;
-              <a href="/signup" className="text-[#328CF0] font-semibold">
-                sign up
+              Already have an account? &nbsp;
+              <a href="/login" className="text-[#328CF0] font-semibold">
+                sign in
               </a>
             </div>
           </form>
@@ -174,4 +155,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ResetPassword;

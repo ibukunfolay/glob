@@ -5,12 +5,15 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { AiOutlinePlusSquare } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const Withdrawal = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [isHidden, setIsHidden] = useState(null);
+  let history = useHistory();
 
   const person = {
     name: "Jane Cooper",
@@ -22,8 +25,25 @@ const Withdrawal = () => {
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
   };
 
+  const onSubmit = () => {
+    setTimeout(() => {
+      history.push("/dashboard/home");
+    }, 3000);
+    toast("Request Successful!", {
+      position: "top-right",
+      type: "success",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   return (
     <div className="">
+      <ToastContainer />
       <div
         onClick={handleOpen}
         className="inline-flex mb-[5em] items-center rounded-md font-medium border-2 border-solid border-Yellow-600 px-2 py-1 text-Yellow-600 hover:text-white hover:bg-Yellow-600 hover:shadow-[0_35px_60px_-15px_rgba(231, 193, 78, 0.9)]"
@@ -31,7 +51,6 @@ const Withdrawal = () => {
         <AiOutlinePlusSquare className="text-xl mr-1" />
         Make Withdrawal
       </div>
-
       <div className="flex flex-col bg-[#212121] min-h-[50vh] px-8 py-4">
         <h1 className="text-2xl font-bold mb-[1em]">Withdrawal</h1>
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -267,7 +286,7 @@ const Withdrawal = () => {
             Cancel
           </Button>
           <Button
-            onClick={handleClose}
+            onClick={onSubmit}
             className="hover:bg-Teal-300 hover:text-Teal-600 text-Teal-600"
             autoFocus
           >

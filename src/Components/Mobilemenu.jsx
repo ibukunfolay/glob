@@ -13,7 +13,7 @@ const Mobilemenu = () => {
           );
         })}
       </div>
-      <div className="flex sm:flex-col ">
+      <div className="flex sm:justify-center items-center ">
         {content.nav.auth.map((button, index) => {
           return (
             <a
