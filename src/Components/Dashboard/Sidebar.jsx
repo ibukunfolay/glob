@@ -340,6 +340,11 @@ const ResponsiveNav = styled.div`
     justify-content: flex-start;
     flex-direction: column;
     gap: 2rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      display: none;
+    }
     .a {
       display: flex;
       justify-content: flex-start;
