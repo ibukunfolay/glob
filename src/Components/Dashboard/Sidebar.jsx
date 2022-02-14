@@ -336,7 +336,7 @@ const ResponsiveNav = styled.div`
   }
   .responsive__links {
     display: flex;
-    margin-top: 1.5em;
+    margin-top: 3em;
     justify-content: flex-start;
     flex-direction: column;
     gap: 1rem;
