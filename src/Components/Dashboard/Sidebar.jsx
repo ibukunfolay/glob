@@ -336,10 +336,10 @@ const ResponsiveNav = styled.div`
   }
   .responsive__links {
     display: flex;
-    margin-top: 3em;
+    margin-top: 1.5em;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     overflow-y: auto;
     &::-webkit-scrollbar {
       width: 0 !important;
